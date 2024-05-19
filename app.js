@@ -49,5 +49,31 @@ const cardArray = [
     }
 ]
 
-cardArray.sort(() => 0.5 - Math.random())
-console.log(cardArray)
+cardArray.sort(() => 0.5 - Math.random())           //Sorts by random 
+
+const gridDisplay = document.querySelector('#grid') //Searches for grid in index.html
+const cardChosen = []
+
+function createBoard () {
+    for (let i =0; i < cardArray.length; i++) {
+        const card = document.createElement('img')
+        card.setAttribute('src', 'https://github.com/kubowania/memory-game/blob/master/images/blank.png?raw=true')
+        card.setAttribute('data-id', i)
+        card.addEventListener('click', flipCard)  //Only will be called when clicked
+        gridDisplay.appendChild(card)
+    }
+}
+
+createBoard()
+
+function flipCard() {
+    console.log(cardArray)
+    const cardId = this.getAttribute('data-id')
+    cardChosen.push(cardArray[cardId].name)
+    console.log('clicked', cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+}
+
+//https://www.pngitem.com/pimgs/m/71-718538_background-image-riddler-question-mark-png-transparent-png.png
+//https://github.com/kubowania/memory-game/blob/master/images/blank.png?raw=true
+
