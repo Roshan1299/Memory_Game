@@ -3,7 +3,11 @@
     height : 300px ;
     display : flex ;
     flex-wrap: wrap;
+}
 
+#grid img {
+    width: 100px;
+    height: 100px;
 }
 
 /*make each image correct size*/

@@ -52,7 +52,11 @@ const cardArray = [
 cardArray.sort(() => 0.5 - Math.random())           //Sorts by random 
 
 const gridDisplay = document.querySelector('#grid') //Searches for grid in index.html
-const cardChosen = []
+const resultDisplay = document.querySelector('#result')
+const statusDisplay = document.querySelector('#status')
+let cardChosen = [] 
+let cardChosenIds = []
+const cardsWon = []
 
 function createBoard () {
     for (let i =0; i < cardArray.length; i++) {
@@ -66,12 +70,47 @@ function createBoard () {
 
 createBoard()
 
+function checkMatch() {
+    const cards = document.querySelectorAll('img')
+
+    if (cardChosenIds[0] == cardChosenIds[1]) {
+        statusDisplay.textContent = 'You have clicked the same image!'
+    }
+
+    if (cardChosen[0] == cardChosen[1]) {
+        statusDisplay.textContent = 'You found a match!'
+        cards[cardChosenIds[0]].setAttribute('src','https://github.com/kubowania/memory-game/blob/master/images/white.png?raw=true')
+        cards[cardChosenIds[1]].setAttribute('src','https://github.com/kubowania/memory-game/blob/master/images/white.png?raw=true')
+        cards[cardChosenIds[0]].removeEventListener('click', flipCard)
+        cards[cardChosenIds[1]].removeEventListener('click', flipCard)
+        cardsWon.push(cardChosen)
+    }
+    else {
+        cards[cardChosenIds[0]].setAttribute('src','https://github.com/kubowania/memory-game/blob/master/images/blank.png?raw=true')
+        cards[cardChosenIds[1]].setAttribute('src','https://github.com/kubowania/memory-game/blob/master/images/blank.png?raw=true')
+        statusDisplay.textContent = 'Sorry, try again!'
+    }
+
+    resultDisplay.textContent = cardsWon.length
+    cardChosen = []
+    cardChosenIds = []
+
+    if (cardsWon.length == cardArray.length/2) {
+        resultDisplay.innerHTML = "Congratulations you have found them all"
+    }
+
+
+}
+
 function flipCard() {
     console.log(cardArray)
     const cardId = this.getAttribute('data-id')
     cardChosen.push(cardArray[cardId].name)
-    console.log('clicked', cardId)
+    cardChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
+    if (cardChosen.length === 2) {
+        setTimeout(checkMatch, 1000 )
+    }
 }
 
 //https://www.pngitem.com/pimgs/m/71-718538_background-image-riddler-question-mark-png-transparent-png.png
