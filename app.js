@@ -110,7 +110,9 @@ function flipCard() {
     this.setAttribute('src', cardArray[cardId].img)
     if (cardChosen.length === 2) {
         setTimeout(checkMatch, 500 )
+    
     }
+    
 }
 
 //https://www.pngitem.com/pimgs/m/71-718538_background-image-riddler-question-mark-png-transparent-png.png
