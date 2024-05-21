@@ -73,7 +73,7 @@ createBoard()
 function checkMatch() {
     const cards = document.querySelectorAll('img')
 
-    if (cardChosenIds[0] == cardChosenIds[1]) {
+    if (cardChosenIds[0] === cardChosenIds[1]) {
         statusDisplay.textContent = 'You have clicked the same image!'
     }
 
@@ -95,21 +95,21 @@ function checkMatch() {
     cardChosen = []
     cardChosenIds = []
 
-    if (cardsWon.length == cardArray.length/2) {
-        resultDisplay.innerHTML = "Congratulations you have found them all"
+    if (cardsWon.length === cardArray.length/2) {
+        statusDisplay.innerHTML = "Congratulations you have found them all"
     }
 
 
 }
 
 function flipCard() {
-    console.log(cardArray)
     const cardId = this.getAttribute('data-id')
+    
     cardChosen.push(cardArray[cardId].name)
     cardChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
     if (cardChosen.length === 2) {
-        setTimeout(checkMatch, 1000 )
+        setTimeout(checkMatch, 500 )
     }
 }
 
