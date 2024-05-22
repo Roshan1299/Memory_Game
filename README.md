@@ -30,3 +30,20 @@ This is the main JavaScript file that includes the logic for the memory game. It
 An array of card objects with name and img properties.
 Functions to create the game board, flip cards, and check for matches.
 Event listeners to handle user interactions.
+
+## How to Play
+
+1. Open the index.html file in a web browser.
+2. The game board will be displayed with all cards face down.
+3. Click on any two cards to flip them and reveal the images.
+4. If the images match, the cards will stay face up. If not, they will be flipped back after a short delay.
+5. Continue flipping cards until all pairs are found.
+6. The score and game status will be displayed at the top of the page.
+
+## Customization
+
+To customize the game, you can modify the following:
+
+Card Images: Update the cardArray in app.js with new images and names.
+Grid Size: Adjust the number of cards in the cardArray to change the grid size.
+Styling: Modify styles.css to change the look and feel of the game.
