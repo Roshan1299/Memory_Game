@@ -11,6 +11,15 @@ This is a simple memory game built with HTML, CSS, and JavaScript. The game invo
 5. If the two cards do not match, they are flipped back face down.
 6. The game continues until all pairs are found.
 
+## How to Play
+
+1. Open the index.html file in a web browser.
+2. The game board will be displayed with all cards face down.
+3. Click on any two cards to flip them and reveal the images.
+4. If the images match, the cards will stay face up. If not, they will be flipped back after a short delay.
+5. Continue flipping cards until all pairs are found.
+6. The score and game status will be displayed at the top of the page.
+
 ## Files Description
 
 ### index.html
@@ -31,14 +40,6 @@ An array of card objects with name and img properties.<br>
 Functions to create the game board, flip cards, and check for matches.<br>
 Event listeners to handle user interactions.<br>
 
-## How to Play
-
-1. Open the index.html file in a web browser.
-2. The game board will be displayed with all cards face down.
-3. Click on any two cards to flip them and reveal the images.
-4. If the images match, the cards will stay face up. If not, they will be flipped back after a short delay.
-5. Continue flipping cards until all pairs are found.
-6. The score and game status will be displayed at the top of the page.
 
 ## Customization
 
