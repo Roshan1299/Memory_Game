@@ -15,21 +15,21 @@ This is a simple memory game built with HTML, CSS, and JavaScript. The game invo
 
 ### index.html
 
-This file sets up the basic structure of the webpage, including:
+This file sets up the basic structure of the webpage, including: <br>
 
-A heading to display the score and status of the game.
-A div with the id grid where the game board will be displayed.
-Links to the stylesheet styles.css and the JavaScript file app.js.
+A heading to display the score and status of the game.<br>
+A div with the id grid where the game board will be displayed.<br>
+Links to the stylesheet styles.css and the JavaScript file app.js.<br>
 
 ### styles.css
 This file contains the CSS to style the game board and other elements of the page. Customize it to change the appearance of the game.
 
 ### app.js
-This is the main JavaScript file that includes the logic for the memory game. It contains:
+This is the main JavaScript file that includes the logic for the memory game. It contains:<br>
 
-An array of card objects with name and img properties.
-Functions to create the game board, flip cards, and check for matches.
-Event listeners to handle user interactions.
+An array of card objects with name and img properties.<br>
+Functions to create the game board, flip cards, and check for matches.<br>
+Event listeners to handle user interactions.<br>
 
 ## How to Play
 
@@ -42,8 +42,8 @@ Event listeners to handle user interactions.
 
 ## Customization
 
-To customize the game, you can modify the following:
+To customize the game, you can modify the following:<br>
 
-Card Images: Update the cardArray in app.js with new images and names.
-Grid Size: Adjust the number of cards in the cardArray to change the grid size.
-Styling: Modify styles.css to change the look and feel of the game.
+Card Images: Update the cardArray in app.js with new images and names.<br>
+Grid Size: Adjust the number of cards in the cardArray to change the grid size.<br>
+Styling: Modify styles.css to change the look and feel of the game.<br>
